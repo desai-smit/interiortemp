@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hughesdesign</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    
+  <style>
+      *{
+        box-sizing: border-box;
+      }
+      
+      .nav {
+        background-color: darkgoldenrod;
+      }
+      .nav-link {
+        color: black;
+        padding: 18px;
+        font-weight: 500;
+      }
+      .btn1 {
+        color: white;
+        margin-left: 41%;
+        border-radius: 0;
+        border: 0px;
+        margin-top: 20px;
+        width: 20%;
+        font-size: larger;
+        font-weight: 500;
+        background-color: goldenrod;
+      }
+      .crousal-heading1 {
+        text-align: center;
+      }
+      .about{
+        width: 100%;
+        margin: 60px 0px;
+      }
+      .aboutus {
+        text-align: center;
+        padding: 10px;
+      }
+      .descheader {
+        color: goldenrod;
+      }
+      .descdetail {
+        color: white;
+        font-size: 14px;
+        margin-top: 1.5rem;
+        line-height: 1.7;
+      }
+      .readmore {
+        color: goldenrod;
+        font-weight: 500;
+      }
+      h5 {
+        text-align: center;
+        background-color: white;
+        color: black;
+      }
+      .whatwedo, .portfolio, .cordlesslamp {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .cordlesslamp {
+        padding-bottom: 20px;
+      }
+      .container2, .container3, .container4, .container5, .container6 {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        padding-right: 0px;
+      }
+      .portfolio {
+        padding-bottom: 10px;
+      }
+      .portfolioimage {
+        display: flex;
+      }
+      .btn2, .btn3, .btn-2 {
+        margin-top: 40px;
+        color: white;
+        margin-left: 42%;
+        border-radius: 0;
+        border: 0px;
+      }
+      .btn2, .btn-2 {
+        width: 200px;
+        font-size: large;
+        background-color: goldenrod;
+      }
+      .btn-2 {
+        margin-left: 42%;
+        font-weight: 500;
+      }
+      .btn3 {
+        margin:0;
+        background-color: goldenrod;
+        width: 150px;
+        font-size: large;
+        font-weight: 500;
+      }
+      .lampimage {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+      }
+      .container5 {
+        display: flex;
+      }
+      .containerinside5 {
+        position: relative;
+        padding: 0%;
+      }
+      .imagecontainer {
+        padding: 0%;
+      }
+      .content {
+        position: absolute; /* Position the background text */
+        bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1; /* Grey text */
+        width: 100%; /* Full width */
+        height: 100%;
+        padding: 40px; /* Some padding */
+        line-height: 2;
+      }
+      .container6 {
+        text-align: center;
+        justify-content: center;
+      }
+      .nav-container {
+        background-color: darkgoldenrod;
+      }
+      .active {
+        background-color: black;
+        color: white;
+      }
+      .item {
+        height: 200px;
+        background-color: white;
+      }
+      .input {
+        width: 40%;
+      }
+      .achieve-main {
+        padding: 70px 10px;
+        background-color: aliceblue;
+      }
+      .imageportion {
+        text-align: -webkit-center;
+      }
+      .imageportioninner {
+        position: relative;
+        overflow: hidden;
+        border-radius: 80%;
+        padding-left: 0px;
+        padding-right: 0px;
+        height: 300px !important;
+        max-width: 300px !important;
+      }
+      .round-image {
+        display: inline;
+        margin: 0px auto;
+        height: 100%;
+        width: auto;
+      }
+      .playbutton {
+        position: absolute;
+        top: 33%;
+        left: 35%;
+      }
+      .round-image:hover {
+        transform: scale(1.1);
+      }
+      .achieve-text {
+        line-height: 1;
+        font-family: initial;
+      }
+      .achieve-h {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        margin-bottom: 20px;
+      }
+      .footer {
+        background-color: rgb(60, 60, 60);
+      }
+      .copyright-section {
+        color: white;
+      line-height: 1;
+      padding-top: 20px;
+      font-size: smaller;
+      }
+      .social-logo {
+        padding-left: 17%;
+      padding-top: 1%;
+      }
+      .logos {
+        padding-right: 10px;
+      }
+      .nav-main {
+        width: 100%;
+        background-color: darkgoldenrod;
+      }
+      .list-nav {
+        padding: 8px;
+      }
+      .ul-list {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .whatwedo-cont {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-color: aliceblue;
+      }
+      .signup {
+        font-weight: 700;
+      }
+      .signup-text {
+        font-weight: 400;
+      }
+      .signupsection {
+        justify-content: center;
+        padding-bottom: 10px;
+      }
+      .btn3signup {
+        padding-top: 20px;
+      }
+      .inputemail {
+        border: black 2px solid;
+        width: 40%;
+      }
+      .inputemailtext {
+        padding: 5px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        border: 0;
+      }
+      .contact-section {
+        justify-content: left;
+      } 
+      .detail-section {
+        justify-content: flex-end;
+      } 
+      .contact-detail {
+        margin-bottom: 0px;
+        align-self: center;
+      }
+      .contact-logo {
+        padding-right: 10px;
+      }
+      .detail-logo {
+        padding-left: 10px;
+      }
+      .details {
+        padding-right: 10px;
+        margin-bottom: 0px;
+        align-self: center;
+      }
+      .contact-detail, .details {
+        color: darkgoldenrod;
+      }
+      .upper-nav {
+        background-color: rgb(60, 60, 60);
+        padding:10px;
+      }
+      .c {
+        width: 100%;
+        background-color: rgb(60, 60, 60);
+      }
+      .c1 {
+        text-align: left;
+      }
+      .c2 {
+        text-align: center;
+      }
+      .c3 {
+        text-align: center;
+        padding: 40px 0px;
+      }
+      .headerquote {
+        font-size: 18px;
+        color: goldenrod;
+      }
+      .carousel-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      }
+      .aboutdiv {
+        position: relative;
+      }
+      .aboutusdesc {
+        background-color: rgb(60, 60, 60);
+        padding: 20px;
+        height: auto;
+        position: absolute;
+        top: 13%;
+        left: 28%;
+      }
+      .images {
+        max-width: 100%;
+      }
+      .c0 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .aboutimage {
+        max-width: 100%;
+      }
+      .container3 .portfolioimages .portfolioimage1  {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .container3 .portfolioimages .portfolioimage2  {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .logo2 {
+        padding-left: 20px;
+      }
+      .owl-dots {
+        display: none;
+      }
+      .owl-carousel .owl-nav button.owl-prev {
+        height: 60px;
+        background-color: grey;
+        width: 6%;
+        color: white;
+        border: 0px;
+        outline: none;
+        border-radius: 0px;
+      }
+      .owl-carousel .owl-nav .owl-prev span {
+        font-weight: 600;
+        font-size: 250%;
+      }
+      .owl-carousel .owl-nav button:focus {
+        background-color: goldenrod !important;
+      }
+      .owl-carousel .owl-nav button.owl-next {
+        height: 60px;
+        background-color: grey;
+        outline: none;
+        width: 6%;
+        color: white;
+        border: 0;
+        border-radius: 0;
+      }
+      .owl-carousel .owl-nav .owl-next span {
+        font-weight: 600;
+        font-size: 250%;
+      }
+      .owl-theme .owl-nav {
+        margin-top: 40px;
+      }
+      .overlay {
+        position: absolute;
+        top: 4%;
+        bottom: 4%;
+        left: 4%;
+        right: 4%;
+        height: 92%;
+        width: 92%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgb(60, 60, 60);
+      }
+
+      .portfolioimage1:hover .overlay {
+        opacity: 0.8;
+      }
+      .portfolioimage2:hover .overlay {
+        opacity: 0.8;
+      }
+      .oimage {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .otext {
+        opacity: 1;
+        color: white;
+        font-size: x-large;
+        font-weight: 500;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .portfolioimage1 {
+        position: relative;
+      }
+      .portfolioimage2 {
+        position: relative;
+      }
+      .nav-main .nav-item a:hover {
+        color: white;
+      }
+      @media (max-width:1025px) {
+          .container5 .content {
+            line-height: 1.4;
+          }
+          .about .aboutusdesc {
+            background-color: rgb(60, 60, 60);
+            padding: 15px;
+            position: absolute;
+            top: 13%;
+            left: 28%;
+          }
+          .about .descdetail {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+          .container3 {
+            margin: 50px 0px;
+          }
+          .container3 .btn2 {
+            margin-left: 40%;
+          }
+          .owl-carousel .owl-nav button.owl-prev {
+            height: 50px;
+          }
+          .owl-carousel .owl-nav .owl-prev span {
+            font-weight: 500;
+            font-size: 200%;
+          }
+          .owl-carousel .owl-nav button.owl-next {
+            height: 50px;
+          }
+          .owl-carousel .owl-nav .owl-next span {
+            font-weight: 500;
+            font-size: 200%;
+          }
+      }
+      @media (max-width:769px){
+          .c3 {
+            padding: 20px 0px;
+          }
+          .crousal-heading1 {
+            text-align: center;
+            font-size: 15px;
+          }
+          #carouselExampleSlidesOnly .btn1 {
+            font-size: medium;
+            padding: 5px;
+          }
+          .about .aboutusdesc {
+            position: initial;
+            top: 0%;
+            bottom: 0%;
+          }
+          .whatwedo-cont .whatwedo {
+            padding-top: 40px;
+          }
+          .whatwedo-cont {
+            padding-bottom: 30px;
+          }
+          .container3 {
+            margin-top: 30px;
+          }
+          .container3 .portfolioimages {
+            text-align-last: center;
+          }
+          .container3 .btn2 {
+            margin-left: 270px;
+          }
+          .lampimage {
+            padding-left: 0%;
+            text-align: center;
+          }
+          .container4 {
+            margin-top: 20px;
+          }
+          .container4 .btn-2 {
+            margin-left: 38%;
+          }
+          .container5 .content {
+            width: 83%;
+            line-height: 2.5;
+            position: absolute;
+            left: 8.5%;
+          }
+          .containerinside5 {
+            text-align: center;
+          }
+          .container5 .imagecontainer {
+            text-align: center;
+          }
+          .inputemail {
+            width: 60%;
+          }
+          .playbutton {
+            position: absolute;
+            top: 35%;
+            left: 37%;
+          }
+          .lamp2 {
+            margin-top: 5px;
+          }
+          .aboutidiv {
+            text-align: center;
+          }
+          .footer {
+            text-align: center;
+          }
+          .social-logo {
+            padding-left: 0%;
+            justify-content: center;
+          }
+      }
+      @media (max-width:426px){
+          .owl-carousel .owl-nav button.owl-prev {
+            height: 40px;
+          }
+          .owl-carousel .owl-nav .owl-prev span {
+            font-weight: 500;
+            font-size: 150%;
+          }
+          .owl-carousel .owl-nav button.owl-next {
+            height: 40px;
+          }
+          .owl-carousel .owl-nav .owl-next span {
+            font-weight: 500;
+            font-size: 150%;
+          }
+          .about .aboutusdesc {
+            position: initial;
+            top: 0%;
+            bottom: 0%;
+          }
+          .footer {
+            text-align: center;
+          }
+          .social-logo {
+            padding-left: 0%;
+            justify-content: center;
+          }
+          .c2 {
+          display: none;
+          }
+          .c .contact-section{
+            justify-content: center;
+          }
+          .c .contact-logo{
+            padding-left: 10px;
+          }
+          .c .detail-section{
+            justify-content: center;
+            margin-top: 5px;
+          }
+          .crousal-heading1 {
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 0;
+          }
+          .carousel-content{
+            width: 100%;
+          }
+          #menu{
+            width: 80px;
+            background-color: rgb(60, 60, 60);
+            padding: 10px;
+            position: absolute;
+            top: 8%;
+            z-index: 9999;
+            right: 0;
+          }
+          .nav-main .ul-list {
+            display: none;
+            position: absolute;
+            top: 8%;
+            width: 100%;
+            z-index: 9999;
+            left: 0;
+          }
+          .line{
+            display: block;
+            width: 80%;
+            height: 4px;
+            background-color: #fff;
+            margin: 7px auto;
+          }
+          #carouselExampleSlidesOnly .btn1 {
+            font-size: medium;
+            width: 20%;
+          }
+          .about .aboutimage {
+            height: 50%;
+          }
+          .about .aboutdiv {
+            display: block;
+          }
+          .container5 .content {
+            padding: 10px;
+            line-height: 1.5;
+            left: 0%;
+            width: 100%;
+          }
+          .container4 .btn-2 {
+            margin-left: 0;
+          }
+          .container4 .btn-row {
+            justify-content: center;
+          }
+          .container4 .i1 {
+            width: 100%;
+            margin-top: 5px;
+          }
+          .container3 .btn2 {
+            margin-left: 0;
+          }
+          .container3 .portbuttonrow {
+            justify-content: center;
+          }
+          .inputemail{
+            width: 80%;
+          }
+          .lamptitle {
+            padding-top: 120px;
+          }
+          .lampimage {
+            padding: 10px;
+          }
+          .achieve-main {
+            padding: 0;
+          }
+          /* .achieve-main .round-image {
+            left: 20%;
+          } */
+          .achieve-main .playbutton {
+            left: 36%;
+          }
+          .whatwedo-cont {
+            padding-bottom: 0;
+          }
+          .whatwedo-row {
+            padding-top: 30px;
+          }
+          .aboutidiv {
+            text-align: center;
+          }
+          .containerinside5 {
+            height: 400px;
+          }
+          .flower {
+            height: inherit;
+          }
+      }
+  </style>
+</head>
+<body>
+  <div class="c">
+    <div class="container upper-nav">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 d-flex contact-section">
+          <p class="contact-detail"><span class="contact-logo"><img src="./images/call.png"></span>403-619-0553</p>
+          <p class="contact-detail"><span class="contact-logo logo2"><img src="./images/email.png"></span>hugesdesign@shaw.ca</p>
+        </div>
+        <div class="col-md-6 col-sm-12 d-flex detail-section">
+          <p class="details">Media</p>
+          <p class="details">|</p>
+          <p class="details">Blog</p>
+          <p class="details">|</p>
+          <p class="details">Community Badges<span class="detail-logo"><img class="details" src="./images/down arrow.png"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row d-flex clearfix c0">
+      <div class="col-lg-5 col-md-6 col-sm-6 c1">
+        <img src="./images/34.png" alt="first slide">
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6 c2">
+        <img src="./images/35.png" alt="Second slide">
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12 c3">
+        <h4 class="headerquote"><b>"What are four walls anyway ! They are what <br> they contain. The house protects the dreamer."</b></h4>
+      </div>
+    </div>
+  </div>
+  <div class="nav-main">
+    <div class="container nav-container">
+      <ul class="nav ul-list" id="navul">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sevices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Achievements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Luxury brands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cordless Lamps</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Floral</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div id="menu" onclick="toggle()">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./images/36.png" alt="First slide">
+        <div class="carousel-content">
+          <h2 class="crousal-heading1">Our company's ability to blend inspiration,<br> individuality and authenticity to the executed custom creation,<br> are paramount to our success.</h2>
+          <button type="button" class="btn btn-warning btn1">EXPLORE</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/36.png" alt="Second slide">
+        <div class="carousel-content">
+          <h3 class="crousal-heading1">Our company's ability to blend inspiration,<br> individuality and authenticity to the executed custom creation,<br> are paramount to our success.</h3>
+          <button type="button" class="btn btn-warning btn1">EXPLORE</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/36.png" alt="Third slide">
+        <div class="carousel-content">
+          <h3 class="crousal-heading1">Our company's ability to blend inspiration,<br> individuality and authenticity to the executed custom creation,<br> are paramount to our success.</h3>
+          <button type="button" class="btn btn-warning btn1">EXPLORE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="aboutus"><b>ABOUT US</b></h3>
+        </div>
+      </div>
+      <div class="row aboutdiv">
+        <div class="col-lg-4 col-md-12 aboutidiv">
+          <img src="./images/37.png" alt="image1" class="aboutimage">
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 aboutusdesc">
+          <h3 class="descheader"><b>A Little of Ourselves</b></h3>
+          <p class="descdetail">As a coveted and acclaimed design firm, Hughes desines Inc. was founded in 2007 by Sandra Hughes, who built 
+            the company creating interiors for residential, corporate, and vacation propeties. Specializing in interior 
+          architectural design, the firm has collaborated with a team of individuals, all of which are highly talented in executing our custom designs.</p>
+          <p class="descdetail">Our company's ability to blend inspiration, individuality and authenticity to the executed custom creation, are 
+            paramount to our success. Our strong desire to collaborate with clients, execute and deliver an intelligent 
+            sophisticated elegance is our primary focus...<span class="readmore">READ MORE</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="whatwedo-cont">
+    <div class="container">
+      <div class="row whatwedo-row">
+        <div class="col-12">
+          <h3 class="whatwedo"><b>WHAT WE DO</b></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="owl-carousel owl-theme">
+          <div class="item"><img src="./images/4.png" alt=""><h5>Space planning and conceptual design</h5></div>
+          <div class="item"><img src="./images/3.png" alt=""><h5>Procurement Services</h5></div>
+          <div class="item"><img src="./images/2.png" alt=""><h5>Design development</h5></div>
+          <div class="item"><img src="./images/1.png" alt=""><h5>kitchen and bath design</h5></div>
+          <div class="item"><img src="./images/4.png" alt=""><h5>Space planning and conceptual design</h5></div>
+          <div class="item"><img src="./images/3.png" alt=""><h5>Procurement Services</h5></div>
+          <div class="item"><img src="./images/2.png" alt=""><h5>Design development</h5></div>
+          <div class="item"><img src="./images/1.png" alt=""><h5>kitchen and bath design</h5></div>
+          <div class="item"><img src="./images/4.png" alt=""><h5>Space planning and conceptual design</h5></div>
+          <div class="item"><img src="./images/3.png" alt=""><h5>Procurement Services</h5></div>
+          <div class="item"><img src="./images/2.png" alt=""><h5>Design development</h5></div>
+          <div class="item"><img src="./images/1.png" alt=""><h5>kitchen and bath design</h5></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="portfolio"><b>PORTFOLIO</b></h3>
+        </div>
+      </div>
+      <div class="row portfolioimages">
+        <div class="col-lg-6 portfolioimage1">
+          <img class="images" src="./images/4in1.png" alt="">
+          <div class="overlay">
+            <img src="./images/iconfinder_search-plus_1608419 (1).png" class="oimage" alt="">
+            <div class="otext">Elbow Valley Residence Exterior</div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolioimage2">
+          <img class="images" src="./images/4in12.png" alt="">
+          <div class="overlay">
+            <img src="./images/iconfinder_search-plus_1608419 (1).png" class="oimage" alt="">
+            <div class="otext">Elbow Valley Residence Exterior</div>
+          </div>
+        </div>
+      </div>
+      <div class="row portbuttonrow">
+        <button type="button" class="btn btn-warning btn2"><b>VIEW PORTFOLIO</b></button>
+      </div>
+    </div>
+  </div>
+  <div class="achieve-main">
+    <div class="container">
+      <div class="row achieve-text">
+        <div class="col-lg-6 col-md-12">
+          <h3 class="achieve-h"><b>OUR ACHIEVEMENTS</b></h3>
+          <p>Business Incorporated 2007</p>
+          <p>Nominated Entrepreneur of the Year Award - Kelowna BC</p>
+          <p>Past President of the Calgary Design Group - Calgary,Alberta</p>
+          <p>Designed logo, negotiated lease, negotiated custom cabinetry and consulted with color and supplier<br>
+              information, for The Design Studio McKenzie Towne, located in Calgay, Alberta.</p>
+          <p>Volunteered and decorated select rooms in the Lougheed House located in Calgary, Alberta for charity.</p>
+          <p>Designed logo fo Dzyne Group Inc.</p>
+          <p>Completed 26.2 marathon, Kelowna, BC</p>
+        </div>
+        <div class="col-lg-6 col-md-12 imageportion">
+          <div class="imageportioninner">
+            <img class="round-image" src="./images/f2.png" alt="">
+          <img class="playbutton" src="./images/video.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container4">
+    <div class="container">
+      <div class="row lamptitle">
+        <div class="col-12">
+          <h3 class="cordlesslamp"><b>CORDLESS LAMPS</b></h3>
+        </div>
+      </div>
+      <div class="row lampimage">
+        <div class="col-lg-3 col-md-6">
+          <img class="i1" src="./images/l1.png" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 lamp2">
+          <img class="i1" src="./images/l2.png" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <img class="i1" src="./images/l1.png" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 lamp2">
+          <img class="i1" src="./images/l2.png" alt="">
+        </div>
+      </div>
+      <div class="row btn-row">
+        <button type="button" class="btn btn-warning btn-2">VISIT OUR E-STORE</button>
+      </div>
+    </div>
+  </div>
+  <div class="container5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 containerinside5">
+          <img class="images flower" src="./images/f1.png" alt="">
+          <div class="content">
+            <h2>Floral</h2>
+            <p>Who doesn't like flower? Our company provides complete floral arrangements 
+              for any occasion.Not only do we prvide custom floral arrangement, we also 
+              provide outstanding bouquets, outdor baskets in the summer, fall and winter 
+              months. Our professionally designed pots for outdoor includes a variety of 
+              greens, flowers and fillersfor an outstanding outdoor showcase for added curb 
+              appeal. Call us today or fill out the form and we can provide you with a quote 
+              for all your floal requirements.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 imagecontainer">
+          <img class="images flower" src="./images/f2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container6">
+    <div class="container">
+      <div class="row signupsection">
+        <h3 class="signup">NEWSLETTER SIGNUP</h3>
+      </div>
+      <div class="row signupsection">
+        <p class="signup-text">Signup to our newsletter for latest news and notification</p>
+      </div>
+      <div class="row signupsection">
+        <div class="inputemail">
+          <!-- <p class="inputemailtext">ENTER YOUR EMAIL ADDRESS</p> -->
+          <input type="email" name="Email" class="inputemailtext" placeholder="ENTER YOUR EMAIL ADDRESS">
+        </div>
+      </div>
+      <div class="row signupsection">
+        <div class="btn3signup">
+          <button type="button" class="btn btn-warning btn3">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 d-block copyright-section">
+          <p>Copyright @ 2016 Hughes Desines | All Rights Reserved | Sitemap</p>
+          <p>Website Designed by S&D</p>
+        </div>
+        <div class="col-lg-6 col-sm-12 d-flex social-logo">
+          <p class="logos"><img src="./images/twitter-16.png" alt=""></p>
+          <p class="logos"><img src="./images/facebook-16.png" alt=""></p>
+          <p class="logos"><img src="./images/pinterest-16.png" alt=""></p>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <script>
+    function toggle(){
+      var x = document.getElementById('navul');
+       if (x.style.display === "none") {
+           x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+    }
+
+  </script>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+      }
+    })
+  </script>    
+</body>
+
+</html>
